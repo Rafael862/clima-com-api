@@ -88,6 +88,14 @@ searchBtn.addEventListener("click", async (e) => {
   showWeatherData(city);
 });
 
+back.addEventListener("click", async (e) => {
+  showWeatherData();
+
+  suggestionContainer.classList.remove("hide");
+  //weatherContainer.classList.add("hide");
+  document.body.style.backgroundImage = "linear-gradient(180deg, rgba(89, 76, 238, 1) 0%, #8dd0f5 100%)";
+})
+
 cityInput.addEventListener("keyup", (e) => {
   if (e.code === "Enter") {
     const city = e.target.value;
